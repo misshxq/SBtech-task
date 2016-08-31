@@ -1,0 +1,154 @@
+/* 
+
+	# CONTENTS
+
+		1. Header style
+
+		2. Main style
+			2.1 Main-content
+			2.2 Aside
+
+		3. Footer
+
+	
+*/
+
+
+body, a, ul ,li, h1, div, span, nav {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.wrapper {
+	max-width: 1280px;
+	width: 800px;	
+}
+
+.float-l { float: left; }
+.float-r { float: right; }
+
+
+/*  1. Header style  */
+
+header {
+	background-color: #cccccc;
+	height: 100px;
+	margin: 10px auto;
+	overflow: auto;	
+	position: relative;	
+}
+
+.logo {
+	background-color: red;	
+	color: #eee;
+	font-weight: 900;
+	left: 0px;
+	top: 100px;
+	position: absolute;	
+	width: 25px;
+	padding: 5px;
+    word-wrap: break-word;
+    z-index: 1;	
+}
+	
+/*	.logo p {		
+		color: #eee;
+		font-weight: 900;
+		margin: 4px;
+		width: 1px;	
+		word-wrap: break-word;	
+	}*/
+
+
+nav {
+	position: absolute;
+	bottom: 0;	
+	width: 100%;
+	padding: 0 10px;
+}
+
+	.nav-menu {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		list-style-type: none;
+	}
+
+	.lang-menu {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		list-style-type: none;
+	}
+
+/*  Header style end */
+
+
+/*  2. Main style  */
+
+main {
+	height: 800px;
+	margin: 0 auto;
+	overflow: auto;
+}
+
+	/*  2.1 Main-content  */
+
+	.left-container {
+		background-color: #cccccc;
+		height: 100%;
+		width: 70%;
+	}
+
+	.main-content {
+		background-color: #666666;
+		margin: 10px;
+		padding: 10px;
+	}
+
+	/*  Main-content end */
+
+
+	/*  2.2 Aside  */
+
+	aside {
+		background-color: #a1a1a1;
+		height: 100%;
+		width: 30%;
+	}
+
+	.aside-content {
+		background-color: #666666;
+		margin: 10px;
+		padding: 10px;
+	}
+
+	/*  Aside end */
+
+
+/*  Main style  end*/
+
+
+/*  3. Footer  */
+
+footer {
+	background-color: #cccccc;
+	line-height: 20px;
+	margin: 10px auto;
+	overflow: auto;
+}
+
+.footer-nav {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	list-style-type: none;	
+}
+
+.footer-items {
+
+
+}
+
+/*  Footer end */
