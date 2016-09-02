@@ -47,19 +47,77 @@
      5. Bonus: Implement sorting on the column headers
      6. Get content with XMLHTTP request from here: http://cn.sbtech.com/sb-test/content.json
 */
-window.onload = accordionToggler;
+
+window.onload = function(){
+  
+  accordionToggler();  
+  dropDownMenu();
+
+};
+
 
 
 function accordionToggler(){    
 
-    var accordionBtn = document.getElementsByClassName('accordion-toggle'),
-        accContainers = document.getElementsByClassName('accordion-container'),
-        i;
-      
+  var accordionBtn = document.getElementsByClassName('accordion-toggle'),
+      accContainers = document.getElementsByClassName('accordion-container');
+   
 
-    for ( i=0; i < accordionBtn.length; i++ ) {
-        accordionBtn[i].addEventListener('click', function(){ 
-            this.nextElementSibling.classList.toggle('is-showing');
-        });
-    }
+  accordionBtn[0].addEventListener('click', function(){
+      accContainers[1].classList.remove('is-showing'); 
+      accContainers[2].classList.remove('is-showing');
+      accContainers[0].classList.toggle('is-showing');  
+  });
+
+  accordionBtn[1].addEventListener('click', function(){         
+      accContainers[0].classList.remove('is-showing');
+      accContainers[2].classList.remove('is-showing');
+      accContainers[1].classList.toggle('is-showing');
+  });
+
+  accordionBtn[2].addEventListener('click', function(){
+      accContainers[0].classList.remove('is-showing');
+      accContainers[1].classList.remove('is-showing');
+      accContainers[2].classList.toggle('is-showing');
+  });
+
+  // for ( i=0; i < accordionBtn.length; i++ ) {
+
+  //     accordionBtn[i].addEventListener('click', function(){ 
+
+  //         this.parentNode.childNodes[i].classList.remove('is-showing');
+  //         this.nextElementSibling.classList.toggle('is-showing'); 
+  //     });
+
+  // }
+
 }
+
+
+function dropDownMenu(){
+
+  var menuItems = document.getElementsByClassName('nav-items'),
+      arrows = document.getElementsByClassName('arrow-right');
+
+  for ( i=0; i < menuItems.length; i++ ) {
+
+      menuItems[i].addEventListener('mouseover',hoverInFunc),
+      menuItems[i].addEventListener('mouseout', hoverOutFunc);
+
+  }
+
+  function hoverInFunc() {
+    this.firstChild.classList.add('navMenuHover');
+    arrows.style.display = 'initial';
+  };
+
+  function hoverOutFunc() {
+    this.firstChild.classList.remove('navMenuHover');
+    this.lastChild.lastChild.style.display = 'none';
+  };
+
+}
+
+
+
+

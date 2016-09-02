@@ -79,6 +79,16 @@ header {
 			font-size: 0.8em;
 		}
 
+		.navMenuHover {
+			background-color: black !important;
+		}
+
+		.arrow-right {
+			position: absolute;
+			margin-left: 5px; 
+			display: none;
+		}
+
 	.lang-menu {
 		position: absolute;
 		bottom: 0;
@@ -183,17 +193,22 @@ main {
 			color: #eee;				
 		}
 
-		.aside-content a {			
+		.accordion-toggle {	
+			border-top: 1px solid #eee;		
 			display: block;
 			padding:10px;
 		}
+
+		.accordion-toggle:first-of-type {
+			border: none;
+		}
+
 
 		.aside-content p {
 			padding: 5px 10px 20px 10px;
 		}
 
 			.accordion-container {
-				border-bottom: 1px solid #eee;
 				display: none;
 			}
 
