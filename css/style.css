@@ -11,11 +11,15 @@
 */
 
 
-body, a, p, ul, li, h1, div, span, nav, section, img, aside {
+body, a, p, ul, li, h1, hr, div, span, nav, section, img, aside {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 	font-family: verdana;	
+}
+
+body {
+	height: 100%;
 }
 
 @font-face {
@@ -31,6 +35,9 @@ body, a, p, ul, li, h1, div, span, nav, section, img, aside {
 .float-l { float: left; }
 .float-r { float: right; }
 
+.show { display: block !important;  }
+.hide { display: none !important; }
+
 a {
 	text-decoration: none;
 }
@@ -41,7 +48,7 @@ header {
 	background-color: #cccccc;
 	height: 100px;
 	margin: 10px auto;
-	overflow: auto;	
+	overflow: visible;	
 	position: relative;	
 }
 
@@ -54,8 +61,8 @@ header {
 	position: absolute;	
 	width: 25px;
 	padding: 5px;
-    word-wrap: break-word;
-    z-index: 1;	
+  word-wrap: break-word;
+  z-index: 1;	
 }
 	
 	.nav-menu {
@@ -68,35 +75,67 @@ header {
 		list-style-type: none;
 	}
 
-		.nav-items a {
-			color: #eee;
-			background-color: #666666;
-			text-align: center;
+		.nav-menu > li {
+			margin: 0 2px;
+		}
+
+		.nav-items {
 			display: block;			
 			width: 90px;
-			line-height: 25px;
-			margin: 0 2px;
+			text-align: center;
+			line-height: 25px;			
 			font-size: 0.8em;
+			color: #eee;
+			background-color: #666666;
+			transition: all 0.2s;
 		}
 
 		.navMenuHover {
 			background-color: black !important;
 		}
 
-		.arrow-right {
+		.arrow {
+			margin-left: 5px;	 			
 			position: absolute;
-			margin-left: 5px; 
-			display: none;
 		}
 
+	/* GAMES SUBMENU */
+
+	#games-submenu-list {
+		position: absolute;			
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		background-color: black;
+		list-style-type: none;
+		width: 150px;	
+	}
+
+	.games-submenu-items {
+		display: block;
+		font-size: 0.7em;
+		padding: 5px 5px;
+		text-align: left;
+		width: 95%;
+    color: #eee;
+    border-bottom: 1px solid #eee;
+    margin: 0 auto;  	
+	}	
+
+	#games-submenu-list li:last-of-type a {
+		border: none;		
+	}
+
+	/* GAMES SUBMENU end */
+
 	.lang-menu {
-		position: absolute;
 		bottom: 0;
-		right:0;
 		display: flex;
 		flex-direction: row;
 		justify-content: center;
 		list-style-type: none;
+		position: absolute;
+		right: 0;
 	}
 
 		.lang-items {	
@@ -106,6 +145,11 @@ header {
 			width: 21px;		
 			margin: 10px;
 			padding: 5px;
+			opacity: 0.5;
+		}
+
+		.opaque {
+			opacity: 1 !important;
 		}
 
 		.uk {
@@ -126,7 +170,7 @@ header {
 /*  2. Main style  */
 
 main {
-	height: auto;
+	height: 780px;
 	margin: 0 auto;
 	overflow: auto;
 }
@@ -135,21 +179,22 @@ main {
 
 	.left-container {
 		background-color: #cccccc;
-		height: auto;
+		height: 100%;
 		width: 70%;
 		padding: 10px;
 	}
 
 	.main-content {
 		background-color: #666666;		
-		min-height: 700px;
+		height: 100%;
 		padding: 10px;
 	}
 
 	.main-content h1 {
+		margin: 5px 0 10px 0;
 		font-family: Halvetica;
 		color: #eee;
-		font-size: 2em;		
+		font-size: 2.5em;		
 	}
 
 	.main-content hr {
@@ -162,16 +207,23 @@ main {
 		text-indent: 5%;		
 		color: #eee;
 		font-size: 0.9em;
-		margin: 30px 0;
+		margin: 15px 0;
 	}
-	/*  Main-content end */
+
+	.text-container {
+		overflow: auto;
+		max-height: 60%;
+		margin: 5px;
+	}
+
+ 	/*  Main-content end */
 
 
 	/*  2.2 Aside  */
 
 	aside {
 		background-color: #a1a1a1;
-		height: auto;
+		height: 100%;
 		padding: 10px;
 		width: 30%;		
 	}
@@ -179,15 +231,19 @@ main {
 	.aside-container {
 		background-color: #666666;		
 		padding: 10px;
-		min-height: 700px;		
+		height: 100%;		
 		overflow: auto;
 	}
-
+  
 		.aside-content {
 			background-color: black;
 		}
 
-		.aside-content p, .aside-content a {	
+	   .accordion-content p {
+			padding: 5px 10px 20px 10px;
+		}
+		
+		.accordion-item p, .accordion-item a {	
 			font-family: Arial;	
 			font-size: 0.9em;
 			color: #eee;				
@@ -197,30 +253,51 @@ main {
 			border-top: 1px solid #eee;		
 			display: block;
 			padding:10px;
+			transition: all 0.2s;
 		}
 
-		.accordion-toggle:first-of-type {
+		.accordion-content {
+			transition: all 0.6s;
+		}
+
+		.accordion-toggle-Hover {
+			background-color: #222;
+		}
+
+		.accordion-item:first-of-type .accordion-toggle {
 			border: none;
 		}
 
-
-		.aside-content p {
-			padding: 5px 10px 20px 10px;
-		}
-
-			.accordion-container {
-				display: none;
-			}
-
-			.accordion-container:last-of-type {
-				border-bottom: none;
-			}
-
-			.is-showing {
-				display: block;
-			}
-
 	/*  Aside end */
+
+/* Table style */
+
+.table-container {
+	max-height: 30%;
+	width: 100%;
+	background-color: #444;
+	overflow: auto;
+	border: 5px solid #333;
+	padding: 3px;
+}
+
+table {
+	width: 100%;
+}
+
+table, tr, td, th {	
+	border-collapse: collapse;
+	border: 1px solid #eee;
+	text-align: center;
+	color: #eee;
+	padding: 5px;
+}
+
+th {
+	border-bottom: 3px solid #eee;
+}
+
+/* Table style */
 
 
 /*  Main style  end*/
@@ -263,6 +340,9 @@ footer {
 		text-decoration: underline;
 	}
 	
+		.footer-items a:hover {		
+		text-decoration: none;
+	}
 	
 
 /*  Footer end */

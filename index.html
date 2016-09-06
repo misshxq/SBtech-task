@@ -4,28 +4,35 @@
 	<title>FRONT-END-HTML-test</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
-	<script src="js/content.js" charset="utf-8"></script>
+	<script src="js/content.js"></script>
 </head>
 <body>
 
-<div>
+
 
 	<div class="logo">LOGO</div>
 	<header class="wrapper">
 			
 			<ul class="nav-menu float-l">
-				<li class="nav-items"><a href="#">Home <span class="arrow-right">&#9662;</span></a></li>
-				<li class="nav-items"><a href="#">Sports <span class="arrow-right">&#9662;</span></a></li>
-				<li class="nav-items"><a href="#">Casion <span class="arrow-right">&#9662;</span></a></li>
-				<li class="nav-items"><a href="#">Games <span class="arrow-right">&#9662;</span></a></li>				
-			</ul>
+				<li><a href="#" class="nav-items">Home <span class="arrow hide">&#9662;</span></a></li>
+				<li><a href="#" class="nav-items">Sports <span class="arrow hide">&#9662;</span></a></li>
+				<li><a href="#" class="nav-items">Casion <span class="arrow hide">&#9662;</span></a></li>
+				<li>
+					<a href="#" class="games nav-items games-menu">Games <span class="arrow hide">&#9662;</span></a>
+					<ul class="hide" id="games-submenu-list">
+						<li><a href="#" class="games-submenu-items">Mega Moolah</a></li>
+						<li><a href="#" class="games-submenu-items">The curse of the black Pearl</a></li>
+						<li><a href="#" class="games-submenu-items">Super slots attack</a></li>
+					</ul>						
+				</li>	
+				
+			</ul>		
 
 			<ul class="lang-menu float-r">
 				<li class="lang-items uk" id="lang-hover"></li>
 				<li class="lang-items germany" id="lang-hover"></li>
 				<li class="lang-items france" id="lang-hover"></li>
-			</ul>
-		
+			</ul>	
 
 	</header>
 
@@ -35,46 +42,47 @@
 			<section class="main-content">
 				<h1>Page Title</h1>
 				<hr>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam temporibus fugit perspiciatis ab, incidunt deserunt iure est officiis, molestias nobis aspernatur aperiam quibusdam sapiente dolores ducimus maiores laborum, cumque nam itaque ipsa id enim provident eveniet officia. Excepturi, consequuntur vero eum laboriosam voluptatibus repudiandae magni cum voluptates laudantium commodi, qui.</p>
+				<div class="text-container">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam temporibus fugit perspiciatis ab, incidunt deserunt iure est officiis, molestias nobis aspernatur aperiam quibusdam sapiente dolores ducimus maiores laborum, cumque nam itaque ipsa id enim provident eveniet officia. Excepturi, consequuntur vero eum laboriosam voluptatibus repudiandae magni cum voluptates laudantium commodi, qui.</p>
 
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum id, nobis exercitationem velit placeat expedita, beatae provident facere asperiores sint dolor quaerat voluptatibus cupiditate eos, tempora dicta. Maxime placeat vel, cumque veritatis dicta debitis suscipit! Reprehenderit mollitia nam hic, laborum aperiam rerum voluptatum dolores velit doloremque nulla iure excepturi totam fugiat, illo ducimus laboriosam aliquam vero asperiores tempore cupiditate. Numquam.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum id, nobis exercitationem velit placeat expedita, beatae provident facere asperiores sint dolor quaerat voluptatibus cupiditate eos, tempora dicta. Maxime placeat vel, cumque veritatis dicta debitis suscipit! Reprehenderit mollitia nam hic, laborum aperiam rerum voluptatum dolores velit doloremque nulla iure excepturi totam fugiat, illo ducimus laboriosam aliquam vero asperiores tempore cupiditate. Numquam.</p>
 
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, expedita hic recusandae. Laudantium esse nobis dolores et incidunt magnam ipsam corrupti adipisci sed. Illum ipsum, natus ratione, excepturi ex quis ab facere laudantium voluptatem vero animi. At id hic labore nemo delectus quas? Minima officia, voluptatibus quaerat neque asperiores nihil doloremque, assumenda. Corrupti eaque deleniti ipsum. Quo amet quidem, id voluptas minus iste repudiandae dolores atque libero sed impedit, quod eaque. Ab aperiam non quae consectetur eum suscipit dolor iusto.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, expedita hic recusandae. Laudantium esse nobis dolores et incidunt magnam ipsam corrupti adipisci sed. Illum ipsum, natus ratione, excepturi ex quis ab facere laudantium voluptatem vero animi. At id hic labore nemo delectus quas? Minima officia, voluptatibus quaerat neque asperiores nihil doloremque, assumenda. Corrupti eaque deleniti ipsum. Quo amet quidem, id voluptas minus iste repudiandae dolores atque libero sed impedit, quod eaque. Ab aperiam non quae consectetur eum suscipit dolor iusto.</p>
 
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, assumenda recusandae. Modi cupiditate eius, expedita quam culpa deleniti eligendi, nobis necessitatibus vero molestias nemo cumque voluptates recusandae fuga minima adipisci.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, assumenda recusandae. Modi cupiditate eius, expedita quam culpa deleniti eligendi, nobis necessitatibus vero molestias nemo cumque voluptates recusandae fuga minima adipisci.</p>
 
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea obcaecati, dignissimos adipisci architecto quisquam iusto molestiae odio inventore, aperiam laudantium animi. Optio consectetur autem assumenda officia pariatur! Quo assumenda a, eos, consequuntur eaque minus vitae fuga eius sit eligendi. Ipsum esse excepturi tenetur assumenda molestiae, in tempora voluptates quo vitae doloribus earum aliquid cupiditate consectetur ducimus voluptas accusantium quos error facilis illum libero laborum sunt dolores officia. Inventore ratione nesciunt facilis in autem eos placeat fuga, neque eveniet omnis cum optio, tempore eligendi minus tempora laboriosam atque tenetur, maiores cupiditate!</p>
-			</section>
-
-			<div class="table-container">
-
-			</div>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea obcaecati, dignissimos adipisci architecto quisquam iusto molestiae odio inventore, aperiam laudantium animi. Optio consectetur autem assumenda officia pariatur! Quo assumenda a, eos, consequuntur eaque minus vitae fuga eius sit eligendi. Ipsum esse excepturi tenetur assumenda molestiae, in tempora voluptates quo vitae doloribus earum aliquid cupiditate consectetur ducimus voluptas accusantium quos error facilis illum libero laborum sunt dolores officia. Inventore ratione nesciunt facilis in autem eos placeat fuga, neque eveniet omnis cum optio, tempore eligendi minus tempora laboriosam atque tenetur, maiores cupiditate!</p>
+				</div>	
+				<div class="table-container" id="table"></div>
+			</section>	
 		</div>
 
 		<aside class="float-r">
 			<div class="aside-container">
 
-				<div class="aside-content">
-					
-					
-						<a class="accordion-toggle" href="#">Click to open <span class="float-r">&#9656;</span></a>
-						<div class="accordion-container">
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex velit quibusdam architecto magnam earum quis mollitia, perspiciatis doloribus eligendi voluptates odio aut rem qui nobis iure aspernatur veritatis nulla, obcaecati distinctio ipsum cupiditate alias dolorem. Dignissimos reiciendis, autem vel corporis!</p>
-						</div>					
-
-					
-						<a class="accordion-toggle" href="#">Click to open <span class="float-r">&#9656;</span></a>
-						<div class="accordion-container">
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex velit quibusdam architecto magnam earum quis mollitia, perspiciatis doloribus eligendi voluptates odio aut rem qui nobis iure aspernatur veritatis nulla, obcaecati distinctio ipsum cupiditate alias dolorem. Dignissimos reiciendis, autem vel corporis!</p>
-						</div>					
-					
-
+				<div class="aside-content">					
 				
-						<a class="accordion-toggle" href="#">Click to open <span class="float-r">&#9656;</span></a>
-						<div class="accordion-container">
+
+					<div class="accordion-item">
+						<a class="accordion-toggle" href="#">Click to open <span class="float-r">&#9656;</span></a>	
+						<div class="accordion-content hide">					
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex velit quibusdam architecto magnam earum quis mollitia, perspiciatis doloribus eligendi voluptates odio aut rem qui nobis iure aspernatur veritatis nulla, obcaecati distinctio ipsum cupiditate alias dolorem. Dignissimos reiciendis, autem vel corporis!</p>
 						</div>
-				
+					</div>
+
+					<div class="accordion-item">
+						<a class="accordion-toggle" href="#">Click to open <span class="float-r">&#9656;</span></a>	
+						<div class="accordion-content hide">					
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex velit quibusdam architecto magnam earum quis mollitia, perspiciatis doloribus eligendi voluptates odio aut rem qui nobis iure aspernatur veritatis nulla, obcaecati distinctio ipsum cupiditate alias dolorem. Dignissimos reiciendis, autem vel corporis!</p>
+						</div>					
+					</div>
+
+					<div class="accordion-item">
+						<a class="accordion-toggle" href="#">Click to open <span class="float-r">&#9656;</span></a>	
+						<div class="accordion-content hide">					
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex velit quibusdam architecto magnam earum quis mollitia, perspiciatis doloribus eligendi voluptates odio aut rem qui nobis iure aspernatur veritatis nulla, obcaecati distinctio ipsum cupiditate alias dolorem. Dignissimos reiciendis, autem vel corporis!</p>
+						</div>
+					</div>
 
 				</div>
 
@@ -95,6 +103,6 @@
 			</ul>
 		</div>
 	</footer>
-</div>
+
 </body>
 </html>
