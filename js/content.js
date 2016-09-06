@@ -95,7 +95,6 @@ function dropDownMenu(){
     menuItems[i].onmouseleave = hoverOutFunc; 
   }
 
-
   gamesSub.onmouseover = function () {        
     this.previousElementSibling.classList.add('navMenuHover');
     this.previousElementSibling.lastChild.classList.remove('hide');
@@ -114,10 +113,10 @@ function dropDownMenu(){
     if ( this.classList.contains('games-menu') ) {
       gamesSub.classList.remove('hide');
     }
+
   };
 
-  function hoverOutFunc() {     
-    gamesSub.classList.add('hide');
+  function hoverOutFunc() { 
     this.classList.remove('navMenuHover');
     this.lastChild.classList.add('hide');
   };
@@ -162,7 +161,6 @@ function XMLHttPRequest() {
       var people = JSON.parse(response),
           tableContainer = document.getElementById('table'),
           out = "<table><tr><th>ID</th><th>First Name</th><th>Last Name</th><th>Occupation</th><th>Hidden Field</th><th>Special Field</th>",
-          btnSort = document.getElementById('sortId');
           i;
 
       for (i = 0; i < people.length; i++) {
@@ -170,9 +168,9 @@ function XMLHttPRequest() {
           "<tr><td>" + people[i]['ID'] + 
           "</td><td>" + people[i]['First Name'] +          
           "</td><td>" + people[i]['Last Name'] + 
-          "</td><td>" + people[i]['Occupation'] + 
+          "</td><td>" + people[i]['Occupation'] +
           "</td><td>" + people[i]['Hidden Field'] + 
-          "</td><td>" + people[i]['Special Field']
+          "</td><td>" + people[i]['Special Field']          
       } 
       out += "</table>";   
 
